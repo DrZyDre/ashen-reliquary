@@ -94,10 +94,17 @@ export function BuildDetailPage({
         <div className="mb-4 rounded-lg border border-red-900/30 bg-black/30 p-4">
           <p className="mb-3 text-xs uppercase tracking-[0.18em] text-red-300/80">Apothecary Ledger</p>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {build.statSpread.map((entry) => {
-              const [stat, value] = parseStat(entry);
-              return <StatGlyph key={entry} stat={stat} value={value} />;
-            })}
+          {Object.entries(build.stats).map((entry) => {
+            const parsed = parseStat(entry);
+
+            return (
+              <StatGlyph
+                key={parsed.stat}
+                stat={parsed.label}
+                value={parsed.value}
+              />
+            );
+          })}
           </div>
         </div>
 
@@ -203,11 +210,21 @@ function BuildSection({
   );
 }
 
-function parseStat(entry: string) {
-  const parts = entry.trim().split(" ");
-  const value = parts.at(-1) ?? "";
-  const stat = parts.slice(0, -1).join(" ") || entry;
-  return [stat, value] as const;
+const statLabels: Record<string, string> = {
+  flesh: "Flesh",
+  blood: "Blood",
+  mind: "Mind",
+  witchery: "Witchery",
+  arsenal: "Arsenal",
+  faith: "Faith",
+};
+
+function parseStat([stat, value]: [string, number]) {
+  return {
+    stat,
+    label: statLabels[stat] ?? stat,
+    value: value.toString(),
+  };
 }
 
 function StatGlyph({ stat, value }: { stat: string; value: string }) {
@@ -227,11 +244,15 @@ function StatGlyph({ stat, value }: { stat: string; value: string }) {
 
 function getStatIcon(stat: string) {
   const key = stat.toLowerCase();
-  if (key.includes("vitality")) return "\u2665";
-  if (key.includes("witchery")) return "\u2726";
-  if (key.includes("dexterity")) return "\u2020";
-  if (key.includes("resolve")) return "\u25c8";
-  return "\u25cf";
+
+  if (key.includes("flesh")) return "♥";
+  if (key.includes("blood")) return "🩸";
+  if (key.includes("mind")) return "◈";
+  if (key.includes("witchery")) return "✦";
+  if (key.includes("arsenal")) return "⚔";
+  if (key.includes("faith")) return "☥";
+
+  return "●";
 }
 
 function inferFamily(item: string, fallbackFamily = "Item") {

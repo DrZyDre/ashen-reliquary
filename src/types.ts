@@ -20,7 +20,14 @@ export interface Build {
   playstyle: string;
   difficulty: Difficulty;
   beginnerFriendly: boolean;
-  statSpread: string[];
+  stats: {
+    flesh: number;
+    blood: number;
+    mind: number;
+    witchery: number;
+    arsenal: number;
+    faith: number;
+  };
   firearms: string[];
   demonic: string[];
   melee: string[];
