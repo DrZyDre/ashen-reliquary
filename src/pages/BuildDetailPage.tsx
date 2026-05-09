@@ -104,7 +104,7 @@ export function BuildDetailPage({
         <div className="grid gap-4 md:grid-cols-2">
           <BuildSection
             title="Weapons"
-            items={[...build.firearms, ...build.demonic]}
+            items={[...build.firearms, ...build.demonic, ...build.melee]}
             iconFamily="Weapon"
             imageUrls={imageUrls}
             gnosisByItem={fetchedGnosis}
@@ -117,8 +117,15 @@ export function BuildDetailPage({
             gnosisByItem={fetchedGnosis}
           />
           <BuildSection
-            title="Incense / Beads / Relic / Fetish / Ring"
-            items={[...build.melee, ...build.incense, ...build.rosaryBeads, ...build.relic, ...build.fetish, ...build.ring]}
+            title="Incense / Relic / Fetish / Ring"
+            items={[...build.incense, ...build.relic, ...build.fetish, ...build.ring]}
+            iconFamily="Item"
+            imageUrls={imageUrls}
+            gnosisByItem={fetchedGnosis}
+          />
+          <BuildSection
+            title="Rosary Beads"
+            items={build.rosaryBeads}
             iconFamily="Item"
             imageUrls={imageUrls}
             gnosisByItem={fetchedGnosis}
