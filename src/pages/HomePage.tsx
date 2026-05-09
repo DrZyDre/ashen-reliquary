@@ -23,9 +23,16 @@ export function HomePage({ isTracked, getCompletionPercent, onTrackBuild }: Home
       const searchBlob = [
         build.name,
         build.playstyle,
-        ...build.weapons,
-        ...build.spells,
-        ...build.incenseBeadsRelicsItems,
+        ...build.firearms,
+        ...build.demonic,
+        ...build.melee,
+        ...build.lightSpell,
+        ...build.heavySpell,
+        ...build.incense,
+        ...build.rosaryBeads,
+        ...build.relic,
+        ...build.fetish,
+        ...build.ring
       ]
         .join(" ")
         .toLowerCase();

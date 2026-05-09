@@ -13,12 +13,12 @@ export const builds: Build[] = [
     melee: ["Fists"],
     lightSpell: ["Fireballs"],
     heavySpell: ["Burning Stake"],
-    incense: ["Blood of a Banshee"],
+    incense: [],
     rosaryBeads: [
       "Short Range Bead",
       "Second Bead",
       "Third Bead",
-      "Forth Bead",
+      "Fourth Bead",
       "Fifth Bead",
     ],
     relic: ["Blood of a Banshee"],
@@ -57,7 +57,7 @@ export const builds: Build[] = [
       "Long Range Bead",
       "Second Bead",
       "Third Bead",
-      "Forth Bead",
+      "Fourth Bead",
       "Fifth Bead"
     ],
     relic: ["Eye of the Madwoman"],
@@ -96,7 +96,7 @@ export const builds: Build[] = [
       "Crystal Spell Bead",
       "Second Bead",
       "Third Bead",
-      "Forth Bead",
+      "Fourth Bead",
       "Fifth Bead"
     ],
     relic: ["Kirfane"],

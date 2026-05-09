@@ -31,7 +31,7 @@ export function BuildDetailPage({
   const [fetchedGnosis, setFetchedGnosis] = useState<Record<string, string | null>>({});
 
   const imageCandidates = useMemo(
-    () => [...build.weapons, ...build.spells, ...build.incenseBeadsRelicsItems],
+    () => [...build.firearms, ...build.demonic, ...build.melee, ...build.lightSpell, ...build.heavySpell, ...build.incense, ...build.rosaryBeads, ...build.relic, ...build.fetish, ...build.ring],
     [build],
   );
 
@@ -104,21 +104,21 @@ export function BuildDetailPage({
         <div className="grid gap-4 md:grid-cols-2">
           <BuildSection
             title="Weapons"
-            items={build.weapons}
+            items={[...build.firearms, ...build.demonic]}
             iconFamily="Weapon"
             imageUrls={imageUrls}
             gnosisByItem={fetchedGnosis}
           />
           <BuildSection
             title="Spells"
-            items={build.spells}
+            items={[...build.lightSpell, ...build.heavySpell]}
             iconFamily="Spell"
             imageUrls={imageUrls}
             gnosisByItem={fetchedGnosis}
           />
           <BuildSection
-            title="Incense / Beads / Relics / Items"
-            items={build.incenseBeadsRelicsItems}
+            title="Incense / Beads / Relic / Fetish / Ring"
+            items={[...build.melee, ...build.incense, ...build.rosaryBeads, ...build.relic, ...build.fetish, ...build.ring]}
             iconFamily="Item"
             imageUrls={imageUrls}
             gnosisByItem={fetchedGnosis}
