@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+html,
+body,
+#app {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(251, 146, 60, 0.1), transparent 28%),
+    radial-gradient(circle at 90% 80%, rgba(251, 191, 36, 0.06), transparent 30%),
+    linear-gradient(180deg, #0f0c0a 0%, #09090b 100%);
+  color: #e4e4e7;
+}
+
+.page-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(105, 74, 35, 0.6), rgba(53, 35, 20, 0.78)),
+    linear-gradient(180deg, rgba(251, 230, 184, 0.16), rgba(135, 92, 41, 0.2));
+  border: 1px solid rgba(185, 28, 28, 0.55);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 231, 182, 0.08),
+    inset 0 0 70px rgba(20, 10, 6, 0.45),
+    0 8px 24px rgba(0, 0, 0, 0.45),
+    0 0 28px rgba(185, 28, 28, 0.2);
+}
+
+.page-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 237, 201, 0.12), rgba(0, 0, 0, 0) 35%),
+    repeating-linear-gradient(
+      180deg,
+      rgba(255, 237, 201, 0.02) 0px,
+      rgba(255, 237, 201, 0.02) 2px,
+      rgba(0, 0, 0, 0) 2px,
+      rgba(0, 0, 0, 0) 6px
+    ),
+    radial-gradient(rgba(255, 246, 224, 0.11) 1px, transparent 1.4px);
+  background-size:
+    100% 100%,
+    100% 100%,
+    3px 3px;
+  opacity: 0.42;
+  border-radius: inherit;
+}
+
+.page-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 220, 160, 0.08),
+    inset 18px 0 28px rgba(30, 18, 10, 0.35),
+    inset -18px 0 28px rgba(30, 18, 10, 0.35),
+    inset 0 -18px 26px rgba(20, 10, 6, 0.4);
+}
+
+.page-card > * {
+  position: relative;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.ink-text {
+  color: #f8edd2;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+.page-muted {
+  color: #e2cea4;
+}
+
+.page-worn-1 {
+  transform: rotate(-0.45deg) translateY(-1px);
+}
+
+.page-worn-2 {
+  transform: rotate(0.4deg) translateY(1px);
+}
+
+.page-worn-3 {
+  transform: rotate(-0.25deg) translate(-1px, 1px);
+}
+
+.page-worn-4 {
+  transform: rotate(0.3deg) translate(1px, -1px);
+}

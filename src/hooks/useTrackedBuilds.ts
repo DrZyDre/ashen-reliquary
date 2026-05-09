@@ -1,0 +1,77 @@
+import { useCallback, useEffect, useMemo, useState } from "react";
+import type { Build } from "../types";
+
+const STORAGE_KEY = "ashen-reliquary-tracked-builds";
+
+type ProgressState = Record<string, Record<string, boolean>>;
+
+export function useTrackedBuilds() {
+  const [trackedBuilds, setTrackedBuilds] = useState<ProgressState>({});
+
+  useEffect(() => {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    try {
+      const parsed = JSON.parse(raw) as ProgressState;
+      setTrackedBuilds(parsed);
+    } catch {
+      setTrackedBuilds({});
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(trackedBuilds));
+  }, [trackedBuilds]);
+
+  const isTracked = useCallback(
+    (buildId: string) => Boolean(trackedBuilds[buildId]),
+    [trackedBuilds],
+  );
+
+  const trackBuild = useCallback((build: Build) => {
+    setTrackedBuilds((prev) => {
+      if (prev[build.id]) return prev;
+      const initial = Object.fromEntries(
+        build.progressionChecklist.map((item) => [item.id, false]),
+      );
+      return { ...prev, [build.id]: initial };
+    });
+  }, []);
+
+  const toggleChecklistItem = useCallback((buildId: string, itemId: string) => {
+    setTrackedBuilds((prev) => {
+      const current = prev[buildId];
+      if (!current) return prev;
+      return {
+        ...prev,
+        [buildId]: {
+          ...current,
+          [itemId]: !current[itemId],
+        },
+      };
+    });
+  }, []);
+
+  const getCompletion = useCallback(
+    (build: Build) => {
+      const checklist = trackedBuilds[build.id];
+      if (!checklist) return { completed: 0, total: build.progressionChecklist.length, percent: 0 };
+      const total = build.progressionChecklist.length;
+      const completed = build.progressionChecklist.filter((item) => checklist[item.id]).length;
+      const percent = total ? Math.round((completed / total) * 100) : 0;
+      return { completed, total, percent };
+    },
+    [trackedBuilds],
+  );
+
+  const trackedCount = useMemo(() => Object.keys(trackedBuilds).length, [trackedBuilds]);
+
+  return {
+    trackedBuilds,
+    trackedCount,
+    isTracked,
+    trackBuild,
+    toggleChecklistItem,
+    getCompletion,
+  };
+}
