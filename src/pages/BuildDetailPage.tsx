@@ -246,7 +246,7 @@ function getStatIcon(stat: string) {
   const key = stat.toLowerCase();
 
   if (key.includes("flesh")) return "♥";
-  if (key.includes("blood")) return "🩸";
+  if (key.includes("blood")) return "⬥";
   if (key.includes("mind")) return "◈";
   if (key.includes("witchery")) return "✦";
   if (key.includes("arsenal")) return "⚔";
