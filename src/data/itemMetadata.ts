@@ -1,5 +1,7 @@
 export interface ItemMetadata {
   gnosis?: string;
+  location?: string;
+  acquisition?: string;
 }
 
 export const itemMetadata: Record<string, ItemMetadata> = {
@@ -58,4 +60,5 @@ export const itemMetadata: Record<string, ItemMetadata> = {
   Vulture: { gnosis: "Gnosis II" },
   Whisper: { gnosis: "Gnosis II" },
   Yew: { gnosis: "Gnosis V" },
+  "Short Range Bead": { acquisition: "Dropped by the Dimacher in Irongate Castle" },
 };

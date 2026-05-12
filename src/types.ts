@@ -33,6 +33,7 @@ export interface Build {
   melee: string[];
   lightSpell: string[];
   heavySpell: string[];
+  prophecies: string[];
   incense: string[];
   rosaryBeads: string[];
   relic: string[];

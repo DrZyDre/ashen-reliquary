@@ -20,6 +20,7 @@ export const builds: Build[] = [
     melee: ["Fist"],
     lightSpell: ["Fireballs"],
     heavySpell: ["Burning Stake"],
+    prophecies: [],
     incense: [],
     rosaryBeads: [
       "Short Range Bead",
@@ -66,6 +67,7 @@ export const builds: Build[] = [
     melee: ["Fist"],
     lightSpell: ["Ice Stiletto"],
     heavySpell: ["Ice Sphere"],
+    prophecies: [],
     incense: [],
     rosaryBeads: [
       "Long Range Bead",
@@ -112,6 +114,7 @@ export const builds: Build[] = [
     melee: ["Fist"],
     lightSpell: ["Lightning Bolt"],
     heavySpell: ["Iron Cross"],
+    prophecies: [],
     incense: [],
     rosaryBeads: [
       "Crystal Spell Bead",
