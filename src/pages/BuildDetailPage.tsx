@@ -196,11 +196,28 @@ function BuildSection({
               </span>
             ) : null}
             <div className="flex items-center gap-2">
-              <span className={iconFamily ? "text-[15px]" : ""}>{iconFamily ? item : `- ${item}`}</span>
-              {resolveGnosis(item, gnosisByItem ?? {}) ? (
-                <span className="rounded border border-red-900/50 bg-red-950/40 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-red-200/90">
-                  {resolveGnosis(item, gnosisByItem ?? {})}
+              <div className="flex items-center gap-2">
+                <span className={iconFamily ? "text-[15px]" : ""}>
+                  {iconFamily ? item : `- ${item}`}
                 </span>
+
+                {resolveGnosis(item, gnosisByItem ?? {}) ? (
+                  <span className="rounded border border-red-900/50 bg-red-950/40 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-red-200/90">
+                    {resolveGnosis(item, gnosisByItem ?? {})}
+                  </span>
+                ) : null}
+              </div>
+
+              {itemMetadata[item]?.acquisition ? (
+                <p className="rounded border border-red-900/50 bg-red-950/40 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-red-200/90">
+                  {itemMetadata[item]?.acquisition}
+                </p>
+              ) : null}
+
+              {itemMetadata[item]?.location ? (
+                <p className="rounded border border-red-900/50 bg-red-950/40 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-red-200/90">
+                  {itemMetadata[item]?.location}
+                </p>
               ) : null}
             </div>
           </li>
