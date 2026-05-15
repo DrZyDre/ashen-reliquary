@@ -31,7 +31,7 @@ export function BuildDetailPage({
   const [fetchedGnosis, setFetchedGnosis] = useState<Record<string, string | null>>({});
 
   const imageCandidates = useMemo(
-    () => [...build.firearms, ...build.demonic, ...build.melee, ...build.lightSpell, ...build.heavySpell, ...build.incense, ...build.rosaryBeads, ...build.relic, ...build.fetish, ...build.ring],
+    () => [...build.firearms, ...build.demonic, ...build.melee, ...build.lightSpell, ...build.heavySpell, ...build.prophecies, ...build.incense, ...build.rosaryBeads, ...build.relic, ...build.fetish, ...build.ring],
     [build],
   );
 
@@ -124,6 +124,13 @@ export function BuildDetailPage({
             gnosisByItem={fetchedGnosis}
           />
           <BuildSection
+            title="Prophecies"
+            items={build.prophecies}
+            iconFamily="Prophecy"
+            imageUrls={imageUrls}
+            gnosisByItem={fetchedGnosis}
+          />
+          <BuildSection
             title="Incense / Relic / Fetish / Ring"
             items={[...build.incense, ...build.relic, ...build.fetish, ...build.ring]}
             iconFamily="Item"
@@ -137,8 +144,13 @@ export function BuildDetailPage({
             imageUrls={imageUrls}
             gnosisByItem={fetchedGnosis}
           />
-          <BuildSection title="Pros" items={build.pros} />
-          <BuildSection title="Cons" items={build.cons} />
+          {build.pros?.length ? (
+            <BuildSection title="Pros" items={build.pros} />
+          ) : null}
+
+          {build.cons?.length ? (
+            <BuildSection title="Cons" items={build.cons} />
+          ) : null}
         </div>
 
         <div className="page-muted mt-4 rounded-lg border border-red-900/30 bg-black/30 p-4">
@@ -207,16 +219,15 @@ function BuildSection({
                   </span>
                 ) : null}
               </div>
+              {itemMetadata[item]?.location ? (
+                <p className="rounded border border-red-900/50 bg-red-950/40 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-red-200/90">
+                  {itemMetadata[item]?.location}
+                </p>
+              ) : null}
 
               {itemMetadata[item]?.acquisition ? (
                 <p className="rounded border border-red-900/50 bg-red-950/40 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-red-200/90">
                   {itemMetadata[item]?.acquisition}
-                </p>
-              ) : null}
-
-              {itemMetadata[item]?.location ? (
-                <p className="rounded border border-red-900/50 bg-red-950/40 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-red-200/90">
-                  {itemMetadata[item]?.location}
                 </p>
               ) : null}
             </div>
@@ -236,11 +247,11 @@ const statLabels: Record<string, string> = {
   faith: "Faith",
 };
 
-function parseStat([stat, value]: [string, number]) {
+function parseStat([stat, value]: [string, number | null | undefined]) {
   return {
     stat,
     label: statLabels[stat] ?? stat,
-    value: value.toString(),
+    value: value == null ? "—" : value.toString(),
   };
 }
 
@@ -294,6 +305,7 @@ function getItemGlyph(family: string) {
   const lower = family.toLowerCase();
   if (lower === "weapon") return "\u2694";
   if (lower === "spell") return "\u2727";
+  if (lower === "prophecy") return "✧";
   if (lower === "ring") return "\u25ce";
   if (lower === "relic") return "\u26b1";
   if (lower === "bead") return "\u2234";

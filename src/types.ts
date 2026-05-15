@@ -39,8 +39,8 @@ export interface Build {
   relic: string[];
   fetish: string[];
   ring: string[];
-  pros: string[];
-  cons: string[];
+  pros?: string[];
+  cons?: string[];
   notes: string;
   progressionChecklist: ChecklistItem[];
 }
