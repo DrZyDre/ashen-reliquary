@@ -9,6 +9,9 @@ const firearms: Record<string, ItemMetadata> = {
   "All-Seeing Eye": { gnosis: "Gnosis III" },
   Angelus: { gnosis: "Gnosis 0" },
   Basilisk: { gnosis: "Gnosis II"},
+  Buckler: { 
+    location: "Location: Profane Study - Shrouded Hermitorium",
+    acquisition: "Acquisition: Conquer the trial of Torment II"},
   Cricket: { gnosis: "Gnosis III" },
   Duelist: { gnosis: "Gnosis II" },
   Echo: { gnosis: "Gnosis 0" },
@@ -17,6 +20,7 @@ const firearms: Record<string, ItemMetadata> = {
     location: "Location: Apothecary - Shrouded Hermitorium", 
     acquisition: "Acquisition: Unseal 3 Irongate Castle Latent Orbs"
   },
+  Fist: {gnosis: "Gnosis 0"},
   Frostbite: { gnosis: "Gnosis II" },
   Hailstorm: { gnosis: "Gnosis I" },
   Hangfire: { gnosis: "Gnosis I" },
@@ -25,6 +29,10 @@ const firearms: Record<string, ItemMetadata> = {
   Judgement: {
     location: "Location: Sanctuary - Shrouded Hermitorium",
     acquisition: "Complete the Witch Mountain labyrinth, then check the overturned bench"
+  },
+  Katar: {
+    location: "Location: Apothecary - Shrouded Hermitorium",
+    acquisition: "Acquisition: Unseal 2 Scarlet Coast Latent Orbs"
   },
   Koschei: {
     gnosis: "Gnosis II",
@@ -37,6 +45,10 @@ const firearms: Record<string, ItemMetadata> = {
     acquisition: "Requires 15,000 Witchfire; found on the altar near reward chests",
   },
   Midas: { gnosis: "Gnosis III" },
+  "Morning Star": {
+    location: "Location: Witch Vault - Velmorne",
+    acquisition: "Acquisition: Found by dropping down the well near the entrance to the vault; inside small room to the side of giant green structure"
+  },
   Nemesis: { gnosis: "Gnosis III" },
   Oracle: {
     location: "Depths of Velmorne — behind the small waterfall",
