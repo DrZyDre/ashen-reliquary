@@ -53,7 +53,10 @@ const firearms: Record<string, ItemMetadata> = {
     location: "Gnosis Chamber — Sanctuary Cellar, Shrouded Hermitorium",
     acquisition: "Dispel the upper-floor Mirage with 2,500 White Volatile Witchfire; Early Access only",
   },
-  Tribunal: {location: "Location: Shrouded Hermitorium", acquisition: "Acquisition: Conquer the trial of Torment VI" },
+  Tribunal: {
+    location: "Location: Shrouded Hermitorium",
+    acquisition: "Acquisition: Conquer the trial of Torment VI" 
+  },
   Vulture: { gnosis: "Gnosis II" },
   Whisper: { gnosis: "Gnosis II" },
 }
@@ -204,9 +207,169 @@ const fetishes: Record<string, ItemMetadata> = {
 }
 
 const beads: Record<string, ItemMetadata> = {
+  "Acute Ailment Bead": {
+    location: "Location: Shrouded Hermitorium",
+    acquisition: "Acquistion: Unseal 3 Velmorne Latent Orbs",
+  },
+  "Adrenaline Bead": {
+    location: "Location: Profane Study - Shrouded Hermitorium",
+    acquisition: "Acquistion: Conquer the trial of Torment III",
+  },
+  "Ailment Immunity Bead": {
+    location: "Location: Widow's Lair - Velmorne",
+    acquisition: "Acquistion: Dropped by the Widow",
+  },
+  "Aliment Power Bead I": {
+    location: "Location: Shipwreck - Island of the Damned",
+    acquisition: "Acquistion: Found in cave",
+  },
+  "Ammo Preservation Bead": {
+    location: "Location: Barren Cliff - Outskirts",
+    acquisition: "Acquistion: Dropped by the Holy Sister",
+  },
+  "Ammo Reserves Bead I": {
+    location: "Location: Shrouded Hermitorium",
+    acquisition: "Acquistion: Found on top of Rosary Desk",
+  },
+  "Blessed Aim Bead I": {
+    location: "Location: Endless Rift - Scarlet Coast",
+    acquisition: "Acquistion: Jump down rift, found in a cave",
+  },
+  "Blessed Fire Bead": {
+    location: "Location: Witch Vault - Velmorne",
+    acquisition: "Acquistion: Found in chest in final chamber",
+  },
+  "Blessed Hits Bead": {
+    location: "Location: Island of the Damned / Scarlet Coast / Velmorne / Irongate Castle",
+    acquisition: "Acquistion: Found in locked Supply Chests",
+  },
+  "Brawler Bead": {
+    location: "Location: Shrouded Hermitorium",
+    acquisition: "Acquistion: Unseal the first Latent Orb of Island of the Damned",
+  },
+  "Crystal Spell Bead": {
+    location: "Location: Shrouded Hermitorium",
+    acquisition: "Acquistion: Unseal the first Latent Orb of Scarlet Coast",
+  },
+  "Dash Range Bead": {
+    location: "Location: Velmorne",
+    acquisition: "Acquistion: Found atop the broken tower",
+  },
+  "Demonic Ammo Bead": {
+    location: "Location: Marketplace - Irongate Castle",
+    acquisition: "Acquistion: Found on a market stand, inside wooden box",
+  },
+  "Divine Intervention Bead I": {
+    location: "Location: Town Square - Irongate Castle",
+    acquisition: "Acquistion: Found next to the gallows",
+  },
+  "Elemental Duration Bead I": {
+    location: "Location: Scarlet Coast",
+    acquisition: "Acquistion: Dropped by the Drowned Captain",
+  },
+  "Elixir Bead I": {
+    location: "Location: Scarlet Coast / Velmorne / Irongate Castle",
+    acquisition: "Acquistion: Dropped by the Warden of the Dead",
+  },
+  "Elixir Bead II": {
+    location: "Location: Edge of the Abyss - Witch Mountain",
+    acquisition: "Acquistion: Found in second rising green gate, in a basket on a rope",
+  },
+  "Free Arcana Bead": {
+    location: "Location: Witch Vault - Island of the Damned",
+    acquisition: "Acquistion: Found in chest in the final chamber",
+  },
+  "Healing Bead I": {
+    location: "Location: Outer Circle - Island of the Damned",
+    acquisition: "Acquistion: Found on the south side",
+  },
+  "Health Bead I": {
+    location: "Location: Shrouded Hermitorium",
+    acquisition: "Acquistion: Found on top of Rosary Desk",
+  },
+  "Health Bead II": {
+    location: "Location: Island of the Damned / Scarlet Coast / Velmorne / Irongate Castle",
+    acquisition: "Acquistion: Found in locked Supply Chests",
+  },
+  "Immune Dash Bead": {
+    location: "Location: Shrouded Hermitorium",
+    acquisition: "Acquistion: Unseal 2 Irongate Castle Latent Orbs",
+  },
+  "Incense Bead I": {
+    location: "Location: Edge of the Abyss - Witch Mountain",
+    acquisition: "Acquistion: Found behind the first rising green gate on a corpse",
+  },
+  "Light Spell Charge Bead": {
+    location: "Location: Witch Vault - Scarlet Coast",
+    acquisition: "Acquistion: Found in chest at the end",
+  },
+  "Long Range Bead": {
+    location: "Location: Thieve's Hollow - Velmorne",
+    acquisition: "Acquistion: Found on a wooden plank extending from a destroyed tower",
+  },
+  "Madness Bead I": {
+    location: "Location: Island of the Damned / Scarlet Coast / Velmorne / Irongate Castle",
+    acquisition: "Acquistion: Found in locked Supply Chests",
+  },
+  "Melee Charge Bead": {
+    location: "Location: Witch Vault - Irongate Castle",
+    acquisition: "Acquistion: Found in a chest in the final vault",
+  },
+  "Melee Recharge Bead I": {
+    location: "Location: Testing Ground - Shrouded Hermitorium",
+    acquisition: "Acquistion: Found in the passageway beneath the destroyed building",
+  },
+  "Metanoia Bead I": {
+    location: "Location: Velmorne",
+    acquisition: "Acquistion: Dropped by the Sepulcher",
+  },
+  "Providence Bead I": {
+    location: "Location: Island of the Damned / Scarlet Coast / Velmorne / Irongate Castle",
+    acquisition: "Acquistion: Found in locked Supply Chests",
+  },
+  "Quickdraw Bead": {
+    location: "Location: Profane Study - Shrouded Hermitorium",
+    acquisition: "Acquistion: Conquer the trial of Torment I",
+  },
+  "Resistance Bead": {
+    location: "Location: Island of the Damned / Scarlet Coast / Velmorne / Irongate Castle",
+    acquisition: "Acquistion: Found in locked Supply Chests",
+  },
   "Short Range Bead": { 
     location:"Location: Irongate Castle", 
     acquisition: "Acquisition: Dropped by the Dimacher" 
+  },
+  "Spell Recharge Bead I": {
+    location: "Location: East of Shipwreck Beach - Scarlet Coast",
+    acquisition: "Acquistion: Found on top a cliff tower",
+  },
+  "Sprint Bead": {
+    location: "Location: Waterfall Bridge / Mechant's Gate - Irongate Castle",
+    acquisition: "Acquistion: Found inside cave between both areas",
+  },
+  "Stamina Bead I": {
+    location: "Location: Shattered Land / Docking Piers - Island of the Damned",
+    acquisition: "Acquistion: Found atop collapsed tower between both areas",
+  },
+  "Stamina Sigil Bead": {
+    location: "Location: Island of the Damned / Scarlet Coast / Velmorne / Irongate Castle",
+    acquisition: "Acquistion: Found in locked Supply Chests",
+  },
+  "Traps Bead": {
+    location: "Location: The Tangles - Velmorne",
+    acquisition: "Acquistion: Found on a rooftop",
+  },
+  "Triple Reward Bead": {
+    location: "Location: Island of the Damned",
+    acquisition: "Acquistion: Dropped by Bonsaire, The Illuminated",
+  },
+  "Vigor Bead I": {
+    location: "Location: Irongate Castle",
+    acquisition: "Acquistion: Dropped by Fallen Liberator",
+  },
+  "Weapon Range Bead I": {
+    location: "Location: Shipwreck Beach - Scarlet Coast",
+    acquisition: "Acquistion: Found next to pier, inside rowboat",
   },
 }
 
