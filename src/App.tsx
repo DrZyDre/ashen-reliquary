@@ -5,7 +5,7 @@ import { BuildDetailPage } from "./pages/BuildDetailPage";
 import { useTrackedBuilds } from "./hooks/useTrackedBuilds";
 
 function App() {
-  const { trackedBuilds, trackedCount, isTracked, trackBuild, toggleChecklistItem, getCompletion } =
+  const { trackedBuilds, isTracked, trackBuild, toggleChecklistItem, getCompletion } =
     useTrackedBuilds();
 
   const onTrackBuild = (buildId: string) => {
@@ -18,14 +18,6 @@ function App() {
     <BrowserRouter>
       <div className="min-h-screen bg-zinc-950 text-zinc-100">
         <div className="mx-auto max-w-7xl px-4 py-8 md:px-8">
-          <header className="page-card relative mb-8 rounded-xl p-6">
-            <h1 className="font-reliquary text-3xl md:text-6xl">Ashen Reliquary</h1>
-            <p className="page-muted mt-2 max-w-3xl">
-              Witchfire-inspired build codex with progression tracking for weapons, spells, stats, gear, and upgrades.
-            </p>
-            <p className="mt-3 text-sm text-red-300">Tracked builds: {trackedCount}</p>
-          </header>
-
           <main>
             <Routes>
               <Route

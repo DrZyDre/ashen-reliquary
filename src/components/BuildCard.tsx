@@ -17,19 +17,21 @@ export function BuildCard({ build, tracked, percent, featured, wornClassName, on
   if (featured) {
     return (
       <article className="page-card relative rounded-xl p-6">
-        <div className="absolute right-4 top-4 rounded-full border border-amber-600/40 bg-amber-950/40 px-2.5 py-1 text-[10px] uppercase tracking-widest text-amber-300/80">
-          Featured
-        </div>
-        <div className="mb-2 flex flex-wrap items-center gap-2 pr-24">
-          <h3 className="ink-text text-2xl font-bold">{build.name}</h3>
-          <span className="rounded-full border border-red-900/60 bg-black/20 px-2 py-1 text-xs text-red-100">
-            {build.difficulty}
+        <div className="mb-3">
+          <span className="mb-2 inline-block rounded-full border border-amber-600/40 bg-amber-950/40 px-2.5 py-1 text-[10px] uppercase tracking-widest text-amber-300/80">
+            Featured
           </span>
-          {build.beginnerFriendly && (
-            <span className="rounded-full border border-green-900/50 bg-green-950/30 px-2 py-1 text-xs text-green-300/80">
-              Beginner Friendly
+          <div className="flex flex-wrap items-center gap-2">
+            <h3 className="ink-text text-2xl font-bold">{build.name}</h3>
+            <span className="rounded-full border border-red-900/60 bg-black/20 px-2 py-1 text-xs text-red-100">
+              {build.difficulty}
             </span>
-          )}
+            {build.beginnerFriendly && (
+              <span className="rounded-full border border-green-900/50 bg-green-950/30 px-2 py-1 text-xs text-green-300/80">
+                Beginner Friendly
+              </span>
+            )}
+          </div>
         </div>
         <p className="page-muted mb-5 text-sm leading-relaxed">{build.playstyle}</p>
  

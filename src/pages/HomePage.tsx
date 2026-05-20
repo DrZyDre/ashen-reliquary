@@ -57,7 +57,7 @@ export function HomePage({ isTracked, getCompletionPercent, onTrackBuild }: Home
           <p className="mb-2 text-xs uppercase tracking-[0.25em] text-red-400/70">
             Witchfire Build Companion
           </p>
-          <h1 className="ink-text mb-3 text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="font-reliquary mb-3 text-4x1 font-bold tracking-tight sm:text-5xl">
             Ashen Reliquary
           </h1>
           <p className="page-muted max-w-xl text-base leading-relaxed">
