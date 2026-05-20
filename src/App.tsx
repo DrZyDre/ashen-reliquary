@@ -19,7 +19,7 @@ function App() {
       <div className="min-h-screen bg-zinc-950 text-zinc-100">
         <div className="mx-auto max-w-7xl px-4 py-8 md:px-8">
           <header className="page-card relative mb-8 rounded-xl p-6">
-            <h1 className="ink-text text-3xl font-bold md:text-4xl">Ashen Reliquary</h1>
+            <h1 className="font-reliquary text-3xl md:text-6xl">Ashen Reliquary</h1>
             <p className="page-muted mt-2 max-w-3xl">
               Witchfire-inspired build codex with progression tracking for weapons, spells, stats, gear, and upgrades.
             </p>
