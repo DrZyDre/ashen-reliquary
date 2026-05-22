@@ -26,7 +26,7 @@ const firearms: Record<string, ItemMetadata> = {
   Hangfire: { gnosis: "Gnosis I" },
   Hunger: { gnosis: "Gnosis 0" },
   Hypnosis: { gnosis: "Gnosis I" },
-  Judgement: {
+  Judgment: {
     location: "Location: Sanctuary - Shrouded Hermitorium",
     acquisition: "Complete the Witch Mountain labyrinth, then check the overturned bench"
   },
