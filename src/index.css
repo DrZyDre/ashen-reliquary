@@ -13,7 +13,7 @@ body,
 }
 
 body {
-  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-cinzel), serif;
   background:
     radial-gradient(circle at 15% 10%, rgba(251, 146, 60, 0.1), transparent 28%),
     radial-gradient(circle at 90% 80%, rgba(251, 191, 36, 0.06), transparent 30%),

@@ -54,17 +54,17 @@ export function HomePage({ isTracked, getCompletionPercent, onTrackBuild }: Home
       <div className="hero-section relative overflow-hidden rounded-2xl px-8 py-12">
         <div className="hero-embers" aria-hidden="true" />
         <div className="relative z-10">
-          <p className="mb-2 text-xs uppercase tracking-[0.25em] text-red-400/70">
+          <p className="mb-2 text-xs text-center uppercase tracking-[0.25em] text-red-400/70">
             Witchfire Build Companion
           </p>
-          <h1 className="font-reliquary mb-3 text-4x1 font-bold tracking-tight sm:text-5xl">
+          <h1 className="font-reliquary text-center mb-3 text-6xl font-bold tracking-tight sm:text-7xl">
             Ashen Reliquary
           </h1>
-          <p className="page-muted max-w-xl text-base leading-relaxed">
+          <p className="page-muted mx-auto max-w-xl text-center text-base leading-relaxed">
             A curated archive of Witchfire builds. Browse weapon loadouts, track your progression,
             and prepare your preyer for the trials ahead.
           </p>
-          <div className="mt-6 flex flex-wrap gap-4 text-sm">
+          <div className="mt-6 flex mx-auto justify-center flex-wrap gap-4 text-sm">
             <div className="stat-pill">
               <span className="text-red-300/60">✦</span>
               <span className="text-red-100">{builds.length} Builds Catalogued</span>
