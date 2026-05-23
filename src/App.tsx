@@ -17,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-zinc-950 text-zinc-100">
-        <div className="mx-auto max-w-7xl px-4 py-8 md:px-8">
+        <div className="mx-auto max-w-screen-2xl px-4 py-8 md:px-8">
           <main>
             <Routes>
               <Route

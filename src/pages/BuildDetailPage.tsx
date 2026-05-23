@@ -98,6 +98,19 @@ export function BuildDetailPage({
         </div>
         <p className="page-muted mb-5">{build.playstyle}</p>
 
+        {build.credit && (
+          <p className="mt-2 text-xs text-red-300/60">
+            Build by{" "}
+             <a href={build.credit.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-300 underline underline-offset-2 hover:text-red-100 transition"
+              >
+                {build.credit.name}
+              </a>
+          </p>
+        )}
+
         <div className="mb-4 rounded-lg border border-red-900/30 bg-black/30 p-4">
           <p className="mb-3 text-xs uppercase tracking-[0.18em] text-red-300/80">Apothecary Ledger</p>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -199,12 +212,12 @@ function BuildSection({
         {items.map((item) => (
           <li key={item} className="flex items-center gap-3">
             {iconFamily ? (
-              <span className="inline-flex h-11 w-11 overflow-hidden rounded-md border border-red-900/50 bg-zinc-950/80 shadow-[0_0_12px_rgba(127,29,29,0.35)]">
+              <span className="inline-flex h-14 w-14 shrink-0 overflow-hidden rounded-md border border-red-900/50 bg-zinc-950/80 shadow-[0_0_12px_rgba(127,29,29,0.35)]">
                 {imageUrls?.[item] ? (
                   <img
                     src={imageUrls[item] ?? ""}
                     alt={item}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain"
                     loading="lazy"
                   />
                 ) : (

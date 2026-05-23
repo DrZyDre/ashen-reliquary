@@ -14,6 +14,11 @@ export interface ChecklistItem {
   optional?: boolean;
 }
 
+export interface BuildCredit {
+  name: string;
+  url: string;
+}
+
 export interface Build {
   id: string;
   name: string;
@@ -42,5 +47,6 @@ export interface Build {
   pros?: string[];
   cons?: string[];
   notes: string;
+  credit?: BuildCredit;
   progressionChecklist: ChecklistItem[];
 }

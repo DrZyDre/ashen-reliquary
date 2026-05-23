@@ -43,6 +43,10 @@ export const builds: Build[] = [
     // pros: ["Covers all ranges", "Strong crowd clear", "Lots of mobility"],
     // cons: ["Less burst than glass-cannon options", "Spell uptime relies on aggression"],
     notes: "Can switch out Dash Range Bead for Free Arcana Bead. Hypnosis is more of a back up",
+    credit: {
+      name: "SeraphMax",
+      url: "https://www.youtube.com/@SeraphMax"
+    },
     progressionChecklist: [
       { id: "e1", label: "Research Hypnosis", group: "weapons" },
       { id: "e2", label: "Research Psychopomp", group: "weapons" },
