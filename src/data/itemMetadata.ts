@@ -204,7 +204,7 @@ const relics: Record<string, ItemMetadata> = {
     gnosis: "Gnosis II", 
     location: "Location: Velmorne" 
   },
-  Scourage: { gnosis: "Gnosis IV" },
+  Scourge: { gnosis: "Gnosis IV" },
   "Severed Ear": { gnosis: "Gnosis III" },
 }
 
@@ -231,7 +231,7 @@ const beads: Record<string, ItemMetadata> = {
     location: "Location: Widow's Lair - Velmorne",
     acquisition: "Acquistion: Dropped by the Widow",
   },
-  "Aliment Power Bead I": {
+  "Ailment Power Bead I": {
     location: "Location: Shipwreck - Island of the Damned",
     acquisition: "Acquistion: Found in cave",
   },

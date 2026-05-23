@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { builds } from "../data/builds";
 import { itemMetadata } from "../data/itemMetadata";
+import  iconManifest  from "../data/iconManifest.json";
 import { TrackerPanel } from "../components/TrackerPanel";
 
 interface BuildDetailPageProps {
@@ -37,16 +38,22 @@ export function BuildDetailPage({
 
   useEffect(() => {
     let cancelled = false;
-
+  
     async function loadImages() {
       const resolved = await Promise.all(
-        imageCandidates.map(async (item) => [item, await fetchWikiThumbnail(item)] as const),
+        imageCandidates.map(async (item) => {
+          // Check local manifest first
+          const local = (iconManifest as Record<string, string>)[item];
+          if (local) return [item, local] as const;
+          // Fall back to wiki fetch
+          return [item, await fetchWikiThumbnail(item)] as const;
+        }),
       );
-
+  
       if (cancelled) return;
       setImageUrls(Object.fromEntries(resolved));
     }
-
+  
     loadImages();
     return () => {
       cancelled = true;
