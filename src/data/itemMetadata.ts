@@ -386,7 +386,42 @@ const beads: Record<string, ItemMetadata> = {
 }
 
 const incense: Record<string, ItemMetadata> = {
-
+  "Bloodthirst Incense": {
+  location: "Location: Irongate Castle",
+  acquisition: "Craft: Eryngium x3, Maiden's Hair x2",
+},
+"Bulwark Incense": {
+  location: "Location: Irongate Castle",
+  acquisition: "Craft: Moonflower x1, Angelica x2",
+},
+"Conjurer Incense": {
+  location: "Location: Scarlet Coast",
+  acquisition: "Craft: Moonflower x1, Charred Bone x3",
+},
+"Patience Incense": {
+  location: "Location: Shrouded Hermitorium",
+  acquisition: "Craft: Angelica x2, Eryngium x2",
+},
+"Potency Incense": {
+  location: "Location: Island of the Damned",
+  acquisition: "Craft: Blood Lily x1, Corpse Wax x4",
+},
+"Resilience Incense": {
+  location: "Location: Velmorne",
+  acquisition: "Craft: Charred Bone x2, Blackened Salt x3",
+},
+"Restoration Incense": {
+  location: "Location: Shrouded Hermitorium",
+  acquisition: "Craft: Angelica x2",
+},
+"Transmutation Incense": {
+  location: "Location: Scarlet Coast",
+  acquisition: "Craft: Blood Lily x2, Maiden's Hair x2",
+},
+"Wellspring Incense": {
+  location: "Location: Scarlet Coast",
+  acquisition: "Craft: Angelica x1, Corpse Wax x1",
+},
 }
 
 export const itemMetadata: Record<string, ItemMetadata> = {
