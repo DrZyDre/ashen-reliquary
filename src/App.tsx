@@ -3,17 +3,21 @@ import { builds } from "./data/builds";
 import { HomePage } from "./pages/HomePage";
 import { BuildDetailPage } from "./pages/BuildDetailPage";
 import { useTrackedBuilds } from "./hooks/useTrackedBuilds";
-
+ 
 function App() {
-  const { trackedBuilds, isTracked, trackBuild, toggleChecklistItem, getCompletion } =
+  const { trackedBuilds, isTracked, trackBuild, untrackBuild, toggleChecklistItem, getCompletion } =
     useTrackedBuilds();
-
+ 
   const onTrackBuild = (buildId: string) => {
     const build = builds.find((entry) => entry.id === buildId);
     if (!build) return;
     trackBuild(build);
   };
-
+ 
+  const onUntrackBuild = (buildId: string) => {
+    untrackBuild(buildId);
+  };
+ 
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-zinc-950 text-zinc-100">
@@ -31,6 +35,7 @@ function App() {
                       return getCompletion(build).percent;
                     }}
                     onTrackBuild={onTrackBuild}
+                    onUntrackBuild={onUntrackBuild}
                   />
                 }
               />
@@ -46,6 +51,7 @@ function App() {
                     }}
                     getChecklistState={(buildId) => trackedBuilds[buildId] ?? {}}
                     onTrackBuild={onTrackBuild}
+                    onUntrackBuild={onUntrackBuild}
                     onToggleChecklist={toggleChecklistItem}
                   />
                 }
@@ -57,5 +63,5 @@ function App() {
     </BrowserRouter>
   );
 }
-
+ 
 export default App;

@@ -10,9 +10,10 @@ interface HomePageProps {
   isTracked: (buildId: string) => boolean;
   getCompletionPercent: (buildId: string) => number;
   onTrackBuild: (buildId: string) => void;
+  onUntrackBuild: (buildId: string) => void;
 }
  
-export function HomePage({ isTracked, getCompletionPercent, onTrackBuild }: HomePageProps) {
+export function HomePage({ isTracked, getCompletionPercent, onTrackBuild, onUntrackBuild }: HomePageProps) {
   const [query, setQuery] = useState("");
   const [difficulty, setDifficulty] = useState<Difficulty | "All">("All");
   const [beginnerOnly, setBeginnerOnly] = useState(false);
@@ -94,6 +95,7 @@ export function HomePage({ isTracked, getCompletionPercent, onTrackBuild }: Home
           percent={getCompletionPercent(featuredBuild.id)}
           featured
           onTrack={() => onTrackBuild(featuredBuild.id)}
+          onUntrack={() => onUntrackBuild(featuredBuild.id)}
         />
       </div>
  
@@ -123,6 +125,7 @@ export function HomePage({ isTracked, getCompletionPercent, onTrackBuild }: Home
                 percent={getCompletionPercent(build.id)}
                 wornClassName={wornVariants[index % wornVariants.length]}
                 onTrack={() => onTrackBuild(build.id)}
+                onUntrack={() => onUntrackBuild(build.id)}
               />
             ))}
           </div>

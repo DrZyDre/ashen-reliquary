@@ -10,6 +10,7 @@ interface BuildDetailPageProps {
   getCompletion: (buildId: string) => { completed: number; total: number; percent: number };
   getChecklistState: (buildId: string) => Record<string, boolean>;
   onTrackBuild: (buildId: string) => void;
+  onUntrackBuild: (buildId: string) => void;
   onToggleChecklist: (buildId: string, itemId: string) => void;
 }
 
@@ -18,6 +19,7 @@ export function BuildDetailPage({
   getCompletion,
   getChecklistState,
   onTrackBuild,
+  onUntrackBuild,
   onToggleChecklist,
 }: BuildDetailPageProps) {
   const { buildId } = useParams();
@@ -186,6 +188,7 @@ export function BuildDetailPage({
         total={completion.total}
         checklistState={checklistState}
         onTrack={() => onTrackBuild(build.id)}
+        onUntrack={() => onUntrackBuild(build.id)}
         onToggle={(itemId) => onToggleChecklist(build.id, itemId)}
       />
     </section>

@@ -17,6 +17,7 @@ interface TrackerPanelProps {
   total: number;
   checklistState: Record<string, boolean>;
   onTrack: () => void;
+  onUntrack: () => void;
   onToggle: (itemId: string) => void;
 }
 
@@ -28,6 +29,7 @@ export function TrackerPanel({
   total,
   checklistState,
   onTrack,
+  onUntrack,
   onToggle,
 }: TrackerPanelProps) {
   if (!tracked) {
@@ -55,6 +57,9 @@ export function TrackerPanel({
         <p className="page-muted text-sm">
           {completed}/{total} complete
         </p>
+        <button type="button" onClick={onUntrack} className="rounded-lg border border-zinc-600 px-3 py-1.5 text-sm font-medium text-zinc-300 transition hover:border-red-500 hover:text-red-300">
+          Untrack
+        </button>
       </div>
       <div className="mb-6">
         <div className="page-muted mb-1 text-xs">{percent}% completion</div>

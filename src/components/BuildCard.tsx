@@ -9,9 +9,10 @@ interface BuildCardProps {
   featured?: boolean;
   wornClassName?: string;
   onTrack: () => void;
+  onUntrack: () => void;
 }
  
-export function BuildCard({ build, tracked, percent, featured, wornClassName, onTrack }: BuildCardProps) {
+export function BuildCard({ build, tracked, percent, featured, wornClassName, onTrack, onUntrack }: BuildCardProps) {
   const allWeapons = [...build.firearms, ...build.demonic, ...build.melee];
  
   if (featured) {
@@ -64,21 +65,30 @@ export function BuildCard({ build, tracked, percent, featured, wornClassName, on
         </div>
  
         <div className="flex gap-2">
-          <button
-            type="button"
-            onClick={onTrack}
-            disabled={tracked}
-            className="rounded-lg bg-red-700 px-4 py-2 text-sm font-medium text-zinc-100 transition hover:bg-red-600 disabled:cursor-not-allowed disabled:bg-zinc-700 disabled:text-zinc-300"
-          >
-            {tracked ? "Tracked" : "Track this build"}
-          </button>
-          <Link
-            to={`/build/${build.id}`}
-            className="rounded-lg border border-zinc-700 px-4 py-2 text-sm text-zinc-100 transition hover:border-red-600"
-          >
-            View details
-          </Link>
-        </div>
+  {tracked ? (
+    <button
+      type="button"
+      onClick={onUntrack}
+      className="rounded-lg border border-zinc-600 px-4 py-2 text-sm font-medium text-zinc-300 transition hover:border-red-500 hover:text-red-300"
+    >
+      Untrack
+    </button>
+  ) : (
+    <button
+      type="button"
+      onClick={onTrack}
+      className="rounded-lg bg-red-700 px-4 py-2 text-sm font-medium text-zinc-100 transition hover:bg-red-600"
+    >
+      Track this build
+    </button>
+  )}
+  <Link
+    to={`/build/${build.id}`}
+    className="rounded-lg border border-zinc-700 px-4 py-2 text-sm text-zinc-100 transition hover:border-red-600"
+  >
+    View details
+  </Link>
+</div>
       </article>
     );
   }
@@ -113,21 +123,30 @@ export function BuildCard({ build, tracked, percent, featured, wornClassName, on
       </div>
  
       <div className="flex gap-2">
-        <button
-          type="button"
-          onClick={onTrack}
-          disabled={tracked}
-          className="rounded-lg bg-red-700 px-3 py-2 text-sm font-medium text-zinc-100 transition hover:bg-red-600 disabled:cursor-not-allowed disabled:bg-zinc-700 disabled:text-zinc-300"
-        >
-          {tracked ? "Tracked" : "Track this build"}
-        </button>
-        <Link
-          to={`/build/${build.id}`}
-          className="rounded-lg border border-zinc-700 px-3 py-2 text-sm text-zinc-100 transition hover:border-red-600"
-        >
-          View details
-        </Link>
-      </div>
+  {tracked ? (
+    <button
+      type="button"
+      onClick={onUntrack}
+      className="rounded-lg border border-zinc-600 px-3 py-2 text-sm font-medium text-zinc-300 transition hover:border-red-500 hover:text-red-300"
+    >
+      Untrack
+    </button>
+  ) : (
+    <button
+      type="button"
+      onClick={onTrack}
+      className="rounded-lg bg-red-700 px-3 py-2 text-sm font-medium text-zinc-100 transition hover:bg-red-600"
+    >
+      Track this build
+    </button>
+  )}
+  <Link
+    to={`/build/${build.id}`}
+    className="rounded-lg border border-zinc-700 px-3 py-2 text-sm text-zinc-100 transition hover:border-red-600"
+  >
+    View details
+  </Link>
+</div>
     </article>
   );
 }

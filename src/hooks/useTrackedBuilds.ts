@@ -66,11 +66,20 @@ export function useTrackedBuilds() {
 
   const trackedCount = useMemo(() => Object.keys(trackedBuilds).length, [trackedBuilds]);
 
+  const untrackBuild = useCallback((buildId: string) => {
+    setTrackedBuilds((prev) => {
+      const next = { ...prev };
+      delete next[buildId];
+      return next;
+    });
+  }, []);
+
   return {
     trackedBuilds,
     trackedCount,
     isTracked,
     trackBuild,
+    untrackBuild,
     toggleChecklistItem,
     getCompletion,
   };
