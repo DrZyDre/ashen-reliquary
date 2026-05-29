@@ -25,7 +25,7 @@ export interface Build {
   playstyle: string;
   difficulty: Difficulty;
   beginnerFriendly: boolean;
-  stats: {
+  stats?: {
     flesh: number;
     blood: number;
     mind: number;

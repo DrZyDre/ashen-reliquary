@@ -113,22 +113,24 @@ export function BuildDetailPage({
           </p>
         )}
 
-        <div className="mb-4 rounded-lg border border-red-900/30 bg-black/30 p-4">
-          <p className="mb-3 text-xs uppercase tracking-[0.18em] text-red-300/80">Apothecary Ledger</p>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {Object.entries(build.stats).map((entry) => {
-            const parsed = parseStat(entry);
+        {build.stats && (
+          <div className="mb-4 rounded-lg border border-red-900/30 bg-black/30 p-4">
+            <p className="mb-3 text-xs uppercase tracking-[0.18em] text-red-300/80">Apothecary Ledger</p>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {Object.entries(build.stats).map((entry) => {
+              const parsed = parseStat(entry);
 
-            return (
-              <StatGlyph
-                key={parsed.stat}
-                stat={parsed.label}
-                value={parsed.value}
-              />
-            );
-          })}
+              return (
+                <StatGlyph
+                  key={parsed.stat}
+                  stat={parsed.label}
+                  value={parsed.value}
+                />
+              );
+            })}
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="grid gap-4 md:grid-cols-2">
           <BuildSection
@@ -145,13 +147,15 @@ export function BuildDetailPage({
             imageUrls={imageUrls}
             gnosisByItem={fetchedGnosis}
           />
-          <BuildSection
-            title="Prophecies"
-            items={build.prophecies}
-            iconFamily="Prophecy"
-            imageUrls={imageUrls}
-            gnosisByItem={fetchedGnosis}
-          />
+          {build.prophecies.length > 0 && (
+            <BuildSection
+              title="Prophecies"
+              items={build.prophecies}
+              iconFamily="Prophecy"
+              imageUrls={imageUrls}
+              gnosisByItem={fetchedGnosis}
+            />
+          )}
           <BuildSection
             title="Incense / Relic / Fetish / Ring"
             items={[...build.incense, ...build.relic, ...build.fetish, ...build.ring]}
@@ -159,13 +163,15 @@ export function BuildDetailPage({
             imageUrls={imageUrls}
             gnosisByItem={fetchedGnosis}
           />
-          <BuildSection
-            title="Rosary Beads"
-            items={build.rosaryBeads}
-            iconFamily="Item"
-            imageUrls={imageUrls}
-            gnosisByItem={fetchedGnosis}
-          />
+          {build.rosaryBeads.length > 0 && (
+            <BuildSection
+              title="Rosary Beads"
+              items={build.rosaryBeads}
+              iconFamily="Item"
+              imageUrls={imageUrls}
+              gnosisByItem={fetchedGnosis}
+            />
+          )}
           {build.pros?.length ? (
             <BuildSection title="Pros" items={build.pros} />
           ) : null}
