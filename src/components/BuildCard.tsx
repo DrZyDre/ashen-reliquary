@@ -97,9 +97,16 @@ export function BuildCard({ build, tracked, percent, featured, wornClassName, on
     <article className={`page-card relative rounded-xl p-5 ${wornClassName ?? ""}`}>
       <div className="mb-2 flex items-center justify-between gap-2">
         <h3 className="ink-text text-xl font-semibold">{build.name}</h3>
-        <span className="rounded-full border border-red-900/60 bg-black/20 px-2 py-1 text-xs text-red-100">
-          {build.difficulty}
-        </span>
+        <div className="flex flex-wrap gap-1.5">
+          <span className="rounded-full border border-red-900/60 bg-black/20 px-2 py-1 text-xs text-red-100">
+            {build.difficulty}
+          </span>
+          {build.beginnerFriendly && (
+            <span className="rounded-full border border-green-900/50 bg-green-950/30 px-2 py-1 text-xs text-green-300/80">
+              Beginner Friendly
+            </span>
+          )}
+        </div>
       </div>
       <p className="page-muted mb-3 text-sm">{build.playstyle}</p>
  
