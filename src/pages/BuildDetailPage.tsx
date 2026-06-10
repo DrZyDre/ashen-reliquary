@@ -219,7 +219,7 @@ function BuildSection({
       <h3 className="mb-2 font-medium text-red-200">{title}</h3>
       <ul className="space-y-2 text-sm text-red-50/90">
         {items.map((item) => (
-          <li key={item} className="flex items-center gap-3">
+          <li key={item} className="flex items-start gap-3 min-w-0">
             {iconFamily ? (
               <span className="inline-flex h-14 w-14 shrink-0 overflow-hidden rounded-md border border-red-900/50 bg-zinc-950/80 shadow-[0_0_12px_rgba(127,29,29,0.35)]">
                 {imageUrls?.[item] ? (
@@ -236,8 +236,8 @@ function BuildSection({
                 )}
               </span>
             ) : null}
-            <div className="flex items-center gap-2">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2 min-w-0">
+              <div className="flex flex-wrap items-center gap-2 min-w-0">
                 <span className={iconFamily ? "text-[15px]" : ""}>
                   {iconFamily ? item : `- ${item}`}
                 </span>
