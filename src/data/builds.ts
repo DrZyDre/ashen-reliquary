@@ -22,7 +22,7 @@ export const builds: Build[] = [
     heavySpell: ["Burning Stake"],
     prophecies: [
       "Prophecy of Dead Eyes",
-      "Empty",
+      "Unslotted",
       "Prophecy of Fire",
       "Prophecy of Destruction",
       "Prophecy of the Bull",
@@ -163,7 +163,7 @@ export const builds: Build[] = [
     heavySpell: ["Cursed Bell"],
     prophecies: [
       "Prophecy of Dead Eyes",
-      "Empty",
+      "Unslotted",
       "Prophecy of Fire",
       "Prophecy of Destruction",
       "Prophecy of the Bull",
@@ -183,7 +183,7 @@ export const builds: Build[] = [
     ring: ["Crown of Fire"],
     // pros: ["Great stagger utility", "Safe against swarms", "Easy mechanical floor"],
     // cons: ["Needs item synergy to shine", "Lower burst than sniper builds"],
-    notes: "Can add Prophecy of Air to empty slot. Can switch Cursed Bell for Burning Stake.",
+    notes: "Can add Prophecy of Air to unslotted slot. Can switch Cursed Bell for Burning Stake.",
     credit: {
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
@@ -254,7 +254,6 @@ export const builds: Build[] = [
     ring: ["Dynamo Ring"],
     // pros: ["Great stagger utility", "Safe against swarms", "Easy mechanical floor"],
     // cons: ["Needs item synergy to shine", "Lower burst than sniper builds"],
-    notes: "N/A",
     credit: {
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
@@ -263,7 +262,7 @@ export const builds: Build[] = [
   {
     id: "ammo-value",
     name: "Ammo Value",
-    playstyle: "Dash twice to activate Crown of Fire, point Rotweaver at enemies and spray them. Rot will take care of the rest. Unload everything on bosses.",
+    playstyle: "More of a melee build to preserve ammo.",
     difficulty: "Easy",
     beginnerFriendly: true,
     firearms: ["Striga", "Hangfire"],
@@ -288,7 +287,7 @@ export const builds: Build[] = [
   {
     id: "get-in-there",
     name: "Get in There",
-    playstyle: "Kill, dash, melee kill, dash, repeat",
+    playstyle: "Kill, dash, melee kill, dash, repeat. High mechanical skill ceiling but gear is easy to acquire.",
     difficulty: "Hard",
     beginnerFriendly: true,
     firearms: ["Psychopomp", "Cricket"],

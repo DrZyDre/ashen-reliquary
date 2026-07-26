@@ -48,7 +48,7 @@ export interface Build {
   ring: string[];
   pros?: string[];
   cons?: string[];
-  notes: string;
+  notes?: string;
   credit?: BuildCredit;
   checklistExtras?: ChecklistItem[];
   progressionChecklist?: ChecklistItem[];

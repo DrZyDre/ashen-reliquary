@@ -39,7 +39,7 @@ export function generateChecklist(build: Build): ChecklistItem[] {
   build.incense.forEach((name, i) =>
     items.push({ id: `in${i}`, label: `Craft ${name}`, group: "gear" })
   );
-  build.prophecies.filter((p) => p !== "Empty").forEach((name, i) =>
+  build.prophecies.filter((p) => p !== "Unslotted").forEach((name, i) =>
     items.push({ id: `pr${i}`, label: `Slot ${name}`, group: "prophecies" })
   );
 
