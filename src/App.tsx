@@ -3,6 +3,7 @@ import { builds } from "./data/builds";
 import { HomePage } from "./pages/HomePage";
 import { BuildDetailPage } from "./pages/BuildDetailPage";
 import { useTrackedBuilds } from "./hooks/useTrackedBuilds";
+import { AboutPage } from "./pages/AboutPage";
  
 function App() {
   const { trackedBuilds, isTracked, trackBuild, untrackBuild, toggleChecklistItem, getCompletion } =
@@ -56,6 +57,7 @@ function App() {
                   />
                 }
               />
+              <Route path="/about" element={<AboutPage />} />
             </Routes>
           </main>
         </div>

@@ -43,6 +43,7 @@ export const builds: Build[] = [
     // pros: ["Covers all ranges", "Strong crowd clear", "Lots of mobility"],
     // cons: ["Less burst than glass-cannon options", "Spell uptime relies on aggression"],
     notes: "Can switch out Dash Range Bead for Free Arcana Bead. Hypnosis is more of a back up",
+    version: "The Reckoning",
     credit: {
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
@@ -90,6 +91,7 @@ export const builds: Build[] = [
     // pros: ["Elite boss control", "Long-range safety", "Strong chain-freeze utility"],
     // cons: ["Lack of AOE", "Punished heavily when rushed"],
     notes: "Can change incense to Bloodthirst Incense for health back on headshots.",
+    version: "The Reckoning",
     credit: {
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
@@ -137,6 +139,7 @@ export const builds: Build[] = [
     // pros: ["Great stagger utility", "Safe against swarms", "Easy mechanical floor"],
     // cons: ["Needs item synergy to shine", "Lower burst than sniper builds"],
     notes: "Can switch Fists for Morning Star if you want more AOE. Can switch Static Ring for Meteor Ring. Striga is ONLY available in Early Access",
+    version: "The Reckoning",
     credit: {
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
@@ -184,6 +187,7 @@ export const builds: Build[] = [
     // pros: ["Great stagger utility", "Safe against swarms", "Easy mechanical floor"],
     // cons: ["Needs item synergy to shine", "Lower burst than sniper builds"],
     notes: "Can add Prophecy of Air to unslotted slot. Can switch Cursed Bell for Burning Stake.",
+    version: "The Reckoning",
     credit: {
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
@@ -230,6 +234,7 @@ export const builds: Build[] = [
     // pros: ["Great stagger utility", "Safe against swarms", "Easy mechanical floor"],
     // cons: ["Needs item synergy to shine", "Lower burst than sniper builds"],
     notes: "Really only need to have Rotweaver, Crown of Fire, Ailment Power Bead I, Elemental Duration Bead I, Acute Ailment Bead and Prophecy of Earth Element for this build to work.",
+    version: "The Reckoning",
     credit: {
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
@@ -254,6 +259,7 @@ export const builds: Build[] = [
     ring: ["Dynamo Ring"],
     // pros: ["Great stagger utility", "Safe against swarms", "Easy mechanical floor"],
     // cons: ["Needs item synergy to shine", "Lower burst than sniper builds"],
+    version: "The Reckoning",
     credit: {
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
@@ -279,6 +285,7 @@ export const builds: Build[] = [
     // pros: ["Great stagger utility", "Safe against swarms", "Easy mechanical floor"],
     // cons: ["Needs item synergy to shine", "Lower burst than sniper builds"],
     notes: "You should never run out of ammo with this build.",
+    version: "The Reckoning",
     credit: {
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
@@ -304,6 +311,7 @@ export const builds: Build[] = [
     // pros: ["Great stagger utility", "Safe against swarms", "Easy mechanical floor"],
     // cons: ["Needs item synergy to shine", "Lower burst than sniper builds"],
     notes: "You should never run out of ammo. Can get you into sticky situations if not careful.",
+    version: "The Reckoning",
     credit: {
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
@@ -329,6 +337,7 @@ export const builds: Build[] = [
     // pros: ["Great stagger utility", "Safe against swarms", "Easy mechanical floor"],
     // cons: ["Needs item synergy to shine", "Lower burst than sniper builds"],
     notes: "Make sure to melee the boss to regain stamina.",
+    version: "The Reckoning",
     credit: {
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
@@ -354,6 +363,7 @@ export const builds: Build[] = [
     // pros: ["Great stagger utility", "Safe against swarms", "Easy mechanical floor"],
     // cons: ["Needs item synergy to shine", "Lower burst than sniper builds"],
     notes: "Very safe build.",
+    version: "The Reckoning",
     credit: {
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"

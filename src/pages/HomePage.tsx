@@ -3,6 +3,7 @@ import { builds } from "../data/builds";
 import type { Difficulty } from "../types";
 import { BuildCard } from "../components/BuildCard";
 import { SidebarFilters } from "../components/SidebarFilters";
+import { Link } from "react-router-dom";
  
 const wornVariants = ["page-worn-1", "page-worn-2", "page-worn-3", "page-worn-4"];
  
@@ -82,6 +83,11 @@ export function HomePage({ isTracked, getCompletionPercent, onTrackBuild, onUntr
                 {[...new Set(builds.flatMap((b) => [...b.lightSpell, ...b.heavySpell]))].length} Spells Indexed
               </span>
             </div>
+          </div>
+          <div className="mt-4 flex justify-center">
+            <Link to="/about" className="text-xs text-red-300/60 underline underline-offset-2 hover:text-red-300 transition">
+              About & FAQ
+            </Link>
           </div>
         </div>
       </div>

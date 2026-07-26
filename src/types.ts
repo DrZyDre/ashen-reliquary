@@ -49,6 +49,7 @@ export interface Build {
   pros?: string[];
   cons?: string[];
   notes?: string;
+  version?: string;
   credit?: BuildCredit;
   checklistExtras?: ChecklistItem[];
   progressionChecklist?: ChecklistItem[];
