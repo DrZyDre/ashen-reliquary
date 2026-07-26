@@ -24,6 +24,10 @@ const firearms: Record<string, ItemMetadata> = {
   Frostbite: { gnosis: "Gnosis II" },
   Hailstorm: { gnosis: "Gnosis I" },
   Hangfire: { gnosis: "Gnosis I" },
+  "Heart Eater": { 
+    location: "Location: Profane Study - Shrouded Hermitorium",
+    acquisition: "Acquisition: Conquer the trial of Torment VIII"
+  },
   Hunger: { gnosis: "Gnosis 0" },
   Hypnosis: { gnosis: "Gnosis I" },
   Judgment: {
@@ -60,11 +64,16 @@ const firearms: Record<string, ItemMetadata> = {
     location: "Dining Area — The Wailing Tower, Island of the Damned",
     acquisition: "Found lying on the Prophet's altar",
   },
+  "Soul Eater": {
+    location: "Location: Apothecary - Shrouded Hermitorium",
+    acquisition: "Acquisition: Unseal 3 Marshland Latent Orbs"
+  },
   Striga: {
     gnosis: "Gnosis II",
     location: "Gnosis Chamber — Sanctuary Cellar, Shrouded Hermitorium",
     acquisition: "Dispel the upper-floor Mirage with 2,500 White Volatile Witchfire; Early Access only",
   },
+  Tempest: { gnosis: "Gnosis IV" },
   Tribunal: {
     location: "Location: Shrouded Hermitorium",
     acquisition: "Acquisition: Conquer the trial of Torment VI" 
@@ -97,7 +106,7 @@ const spells: Record<string, ItemMetadata> = {
 }
 
 const prophecies: Record<string, ItemMetadata> = {
-  "Prophecy of Air Element": { 
+  "Prophecy of Air": { 
     location: "Location: Astral Rift - The Wailing Tower, Island of the Damned", 
     acquisition: "Acquisition: Found within the Madman's Dream" 
   },
@@ -109,11 +118,11 @@ const prophecies: Record<string, ItemMetadata> = {
     location: "Location: Dining Area - The Wailing Tower, Island of the Damned",
     acquisition: "Acquisition: Trade 330 Divine Essence at the altar"
   },
-  "Prophecy of Earth Element": {
+  "Prophecy of Earth": {
     location: "Location: Astral Rift - The Wailing Tower, Island of the Damned",
     acquisition: "Acquisition: Found within the Madman's Dream"
   },
-  "Prophecy of Fire Element": {
+  "Prophecy of Fire": {
     location: "Location: Astral Rift - The Wailing Tower, Island of the Damned",
     acquisition: "Acquisition: Found within the Madman's Dream"
   },
@@ -161,7 +170,7 @@ const prophecies: Record<string, ItemMetadata> = {
     location: "Location: Intake Area - The Wailing Tower, Island of the Damned",
     acquisition: "Acquisition: Found on broken support bridge"
   },
-  "Prophecy of Water Element": {
+  "Prophecy of Water": {
     location: "Location: Astral Rift - The Wailing Tower, Island of the Damned",
     acquisition: "Acquisition: Found within the Madman's Dream"
   },
@@ -388,39 +397,39 @@ const beads: Record<string, ItemMetadata> = {
 const incense: Record<string, ItemMetadata> = {
   "Bloodthirst Incense": {
   location: "Location: Irongate Castle",
-  acquisition: "Craft: Eryngium x3, Maiden's Hair x2",
+  acquisition: "Craft: Eryngium x 3, Maiden's Hair x 2",
 },
 "Bulwark Incense": {
   location: "Location: Irongate Castle",
-  acquisition: "Craft: Moonflower x1, Angelica x2",
+  acquisition: "Craft: Moonflower x 1, Angelica x 2",
 },
 "Conjurer Incense": {
   location: "Location: Scarlet Coast",
-  acquisition: "Craft: Moonflower x1, Charred Bone x3",
+  acquisition: "Craft: Moonflower x 1, Charred Bone x 3",
 },
 "Patience Incense": {
   location: "Location: Shrouded Hermitorium",
-  acquisition: "Craft: Angelica x2, Eryngium x2",
+  acquisition: "Craft: Angelica x 2, Eryngium x 2",
 },
 "Potency Incense": {
   location: "Location: Island of the Damned",
-  acquisition: "Craft: Blood Lily x1, Corpse Wax x4",
+  acquisition: "Craft: Blood Lily x 1, Corpse Wax x 4",
 },
 "Resilience Incense": {
   location: "Location: Velmorne",
-  acquisition: "Craft: Charred Bone x2, Blackened Salt x3",
+  acquisition: "Craft: Charred Bone x 2, Blackened Salt x 3",
 },
 "Restoration Incense": {
   location: "Location: Shrouded Hermitorium",
-  acquisition: "Craft: Angelica x2",
+  acquisition: "Craft: Angelica x 2",
 },
 "Transmutation Incense": {
   location: "Location: Scarlet Coast",
-  acquisition: "Craft: Blood Lily x2, Maiden's Hair x2",
+  acquisition: "Craft: Blood Lily x 2, Maiden's Hair x 2",
 },
 "Wellspring Incense": {
   location: "Location: Scarlet Coast",
-  acquisition: "Craft: Angelica x1, Corpse Wax x1",
+  acquisition: "Craft: Angelica x 1, Corpse Wax x 1",
 },
 }
 

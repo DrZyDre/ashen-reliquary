@@ -23,7 +23,7 @@ export const builds: Build[] = [
     prophecies: [
       "Prophecy of Dead Eyes",
       "Empty",
-      "Prophecy of Fire Element",
+      "Prophecy of Fire",
       "Prophecy of Destruction",
       "Prophecy of the Bull",
       "Prophecy of the Serpent",
@@ -47,22 +47,6 @@ export const builds: Build[] = [
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
     },
-    progressionChecklist: [
-      { id: "e1", label: "Research Hypnosis", group: "weapons" },
-      { id: "e2", label: "Research Psychopomp", group: "weapons" },
-      { id: "e3", label: "Research Falling Star", group: "weapons" },
-      { id: "e4", label: "Obtain Katar", group: "weapons" },
-      { id: "e5", label: "Obtain Firebreath", group: "spells" },
-      { id: "e6", label: "Obtain Burning Stake", group: "spells" },
-      { id: "e7", label: "Reach Faith 40", group: "stats" },
-      { id: "e8", label: "Reach Arsenal 30", group: "stats" },
-      { id: "e9", label: "Reach Blood 30", group: "stats" },
-      { id: "e10", label: "Reach Flesh 15", group: "stats" },
-      { id: "e11", label: "Equip Biting Tongue", group: "gear" },
-      { id: "e12", label: "Equip Belladonna", group: "gear" },
-      { id: "e13", label: "Equip Crown of Fire", group: "gear" },
-      { id: "e14", label: "Unlock Mysterium II for Psychopomp", group: "optional", optional: true },
-    ],
   },
   {
     id: "safe-freeze",
@@ -85,8 +69,8 @@ export const builds: Build[] = [
     heavySpell: ["Ice Sphere"],
     prophecies: [
       "Prophecy of Dead Eyes",
-      "Prophecy of Water Element",
-      "Prophecy of Fire Element",
+      "Prophecy of Water",
+      "Prophecy of Fire",
       "Prophecy of Destruction",
       "Prophecy of the Bull",
       "Prophecy of the Serpent",
@@ -110,20 +94,6 @@ export const builds: Build[] = [
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
     },
-    progressionChecklist: [
-      { id: "g1", label: "Research Frostbite", group: "weapons" },
-      { id: "g2", label: "Research Hunger", group: "weapons" },
-      { id: "g3", label: "Research Falling Star", group: "weapons" },
-      { id: "g4", label: "Unlock Stormball", group: "spells" },
-      { id: "g5", label: "Unlock Ice Sphere", group: "spells" },
-      { id: "g6", label: "Reach Mind 40", group: "stats" },
-      { id: "g7", label: "Reach Faith 40", group: "stats" },
-      { id: "g8", label: "Reach Witchery 20", group: "stats" },
-      { id: "g9", label: "Reach Aresenal 20", group: "stats" },
-      { id: "g10", label: "Equip Eye of the Madwoman", group: "gear" },
-      { id: "g11", label: "Equip Belladonna + Ring of Thorns", group: "gear" },
-      { id: "g12", label: "Unlock Mysterium III for Frostbite", group: "optional", optional: true },
-    ],
   },
   {
     id: "echo-fire",
@@ -146,8 +116,8 @@ export const builds: Build[] = [
     heavySpell: ["Burning Stake"],
     prophecies: [
       "Prophecy of Dead Eyes",
-      "Prophecy of Air Element",
-      "Prophecy of Fire Element",
+      "Prophecy of Air",
+      "Prophecy of Fire",
       "Prophecy of Destruction",
       "Prophecy of the Bull",
       "Prophecy of the Serpent",
@@ -166,23 +136,11 @@ export const builds: Build[] = [
     ring: ["Static Ring"],
     // pros: ["Great stagger utility", "Safe against swarms", "Easy mechanical floor"],
     // cons: ["Needs item synergy to shine", "Lower burst than sniper builds"],
-    notes: "Can switch Fists for Morning Star if you want more AOE. Can switch Static Ring for Meteor Ring",
+    notes: "Can switch Fists for Morning Star if you want more AOE. Can switch Static Ring for Meteor Ring. Striga is ONLY available in Early Access",
     credit: {
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
     },
-    progressionChecklist: [
-      { id: "f1", label: "Research Angelus", group: "weapons" },
-      { id: "f2", label: "Research Hangfire", group: "weapons" },
-      { id: "f3", label: "Research Whisper", group: "weapons" },
-      { id: "f4", label: "Unlock Lightning Bolt", group: "spells" },
-      { id: "f5", label: "Unlock Iron Cross", group: "spells" },
-      { id: "f6", label: "Reach Vitality 30", group: "stats" },
-      { id: "f7", label: "Reach Resolve 22", group: "stats" },
-      { id: "f8", label: "Equip Kirfane", group: "gear" },
-      { id: "f9", label: "Equip Yew + Dynamo Ring", group: "gear" },
-      { id: "f10", label: "Unlock Mysterium II for Angelus", group: "optional", optional: true },
-    ],
   },
   {
     id: "cricket-boss",
@@ -206,7 +164,7 @@ export const builds: Build[] = [
     prophecies: [
       "Prophecy of Dead Eyes",
       "Empty",
-      "Prophecy of Fire Element",
+      "Prophecy of Fire",
       "Prophecy of Destruction",
       "Prophecy of the Bull",
       "Prophecy of the Serpent",
@@ -230,18 +188,6 @@ export const builds: Build[] = [
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
     },
-    progressionChecklist: [
-      { id: "f1", label: "Research Angelus", group: "weapons" },
-      { id: "f2", label: "Research Hangfire", group: "weapons" },
-      { id: "f3", label: "Research Whisper", group: "weapons" },
-      { id: "f4", label: "Unlock Lightning Bolt", group: "spells" },
-      { id: "f5", label: "Unlock Iron Cross", group: "spells" },
-      { id: "f6", label: "Reach Vitality 30", group: "stats" },
-      { id: "f7", label: "Reach Resolve 22", group: "stats" },
-      { id: "f8", label: "Equip Kirfane", group: "gear" },
-      { id: "f9", label: "Equip Yew + Dynamo Ring", group: "gear" },
-      { id: "f10", label: "Unlock Mysterium II for Angelus", group: "optional", optional: true },
-    ],
   },
   {
     id: "super-rot",
@@ -264,8 +210,7 @@ export const builds: Build[] = [
     heavySpell: ["Burning Stake"],
     prophecies: [
       "Prophecy of Dead Eyes",
-      "Prophecy of Earth Element",
-      "Prophecy of Fire Element",
+      "Prophecy of Earth",
       "Prophecy of Destruction",
       "Prophecy of the Bull",
       "Prophecy of the Serpent",
@@ -289,18 +234,6 @@ export const builds: Build[] = [
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
     },
-    progressionChecklist: [
-      { id: "f1", label: "Research Angelus", group: "weapons" },
-      { id: "f2", label: "Research Hangfire", group: "weapons" },
-      { id: "f3", label: "Research Whisper", group: "weapons" },
-      { id: "f4", label: "Unlock Lightning Bolt", group: "spells" },
-      { id: "f5", label: "Unlock Iron Cross", group: "spells" },
-      { id: "f6", label: "Reach Vitality 30", group: "stats" },
-      { id: "f7", label: "Reach Resolve 22", group: "stats" },
-      { id: "f8", label: "Equip Kirfane", group: "gear" },
-      { id: "f9", label: "Equip Yew + Dynamo Ring", group: "gear" },
-      { id: "f10", label: "Unlock Mysterium II for Angelus", group: "optional", optional: true },
-    ],
   },
   {
     id: "just-wanna-blast",
@@ -326,18 +259,6 @@ export const builds: Build[] = [
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
     },
-    progressionChecklist: [
-      { id: "f1", label: "Research Angelus", group: "weapons" },
-      { id: "f2", label: "Research Hangfire", group: "weapons" },
-      { id: "f3", label: "Research Whisper", group: "weapons" },
-      { id: "f4", label: "Unlock Lightning Bolt", group: "spells" },
-      { id: "f5", label: "Unlock Iron Cross", group: "spells" },
-      { id: "f6", label: "Reach Vitality 30", group: "stats" },
-      { id: "f7", label: "Reach Resolve 22", group: "stats" },
-      { id: "f8", label: "Equip Kirfane", group: "gear" },
-      { id: "f9", label: "Equip Yew + Dynamo Ring", group: "gear" },
-      { id: "f10", label: "Unlock Mysterium II for Angelus", group: "optional", optional: true },
-    ],
   },
   {
     id: "ammo-value",
@@ -363,18 +284,6 @@ export const builds: Build[] = [
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
     },
-    progressionChecklist: [
-      { id: "f1", label: "Research Angelus", group: "weapons" },
-      { id: "f2", label: "Research Hangfire", group: "weapons" },
-      { id: "f3", label: "Research Whisper", group: "weapons" },
-      { id: "f4", label: "Unlock Lightning Bolt", group: "spells" },
-      { id: "f5", label: "Unlock Iron Cross", group: "spells" },
-      { id: "f6", label: "Reach Vitality 30", group: "stats" },
-      { id: "f7", label: "Reach Resolve 22", group: "stats" },
-      { id: "f8", label: "Equip Kirfane", group: "gear" },
-      { id: "f9", label: "Equip Yew + Dynamo Ring", group: "gear" },
-      { id: "f10", label: "Unlock Mysterium II for Angelus", group: "optional", optional: true },
-    ],
   },
   {
     id: "get-in-there",
@@ -400,18 +309,6 @@ export const builds: Build[] = [
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
     },
-    progressionChecklist: [
-      { id: "f1", label: "Research Angelus", group: "weapons" },
-      { id: "f2", label: "Research Hangfire", group: "weapons" },
-      { id: "f3", label: "Research Whisper", group: "weapons" },
-      { id: "f4", label: "Unlock Lightning Bolt", group: "spells" },
-      { id: "f5", label: "Unlock Iron Cross", group: "spells" },
-      { id: "f6", label: "Reach Vitality 30", group: "stats" },
-      { id: "f7", label: "Reach Resolve 22", group: "stats" },
-      { id: "f8", label: "Equip Kirfane", group: "gear" },
-      { id: "f9", label: "Equip Yew + Dynamo Ring", group: "gear" },
-      { id: "f10", label: "Unlock Mysterium II for Angelus", group: "optional", optional: true },
-    ],
   },
   {
     id: "i-hate-the-boss",
@@ -437,18 +334,6 @@ export const builds: Build[] = [
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
     },
-    progressionChecklist: [
-      { id: "f1", label: "Research Angelus", group: "weapons" },
-      { id: "f2", label: "Research Hangfire", group: "weapons" },
-      { id: "f3", label: "Research Whisper", group: "weapons" },
-      { id: "f4", label: "Unlock Lightning Bolt", group: "spells" },
-      { id: "f5", label: "Unlock Iron Cross", group: "spells" },
-      { id: "f6", label: "Reach Vitality 30", group: "stats" },
-      { id: "f7", label: "Reach Resolve 22", group: "stats" },
-      { id: "f8", label: "Equip Kirfane", group: "gear" },
-      { id: "f9", label: "Equip Yew + Dynamo Ring", group: "gear" },
-      { id: "f10", label: "Unlock Mysterium II for Angelus", group: "optional", optional: true },
-    ],
   },
   {
     id: "backup-shotgun",
@@ -474,17 +359,5 @@ export const builds: Build[] = [
       name: "SeraphMax",
       url: "https://www.youtube.com/@SeraphMax"
     },
-    progressionChecklist: [
-      { id: "f1", label: "Research Angelus", group: "weapons" },
-      { id: "f2", label: "Research Hangfire", group: "weapons" },
-      { id: "f3", label: "Research Whisper", group: "weapons" },
-      { id: "f4", label: "Unlock Lightning Bolt", group: "spells" },
-      { id: "f5", label: "Unlock Iron Cross", group: "spells" },
-      { id: "f6", label: "Reach Vitality 30", group: "stats" },
-      { id: "f7", label: "Reach Resolve 22", group: "stats" },
-      { id: "f8", label: "Equip Kirfane", group: "gear" },
-      { id: "f9", label: "Equip Yew + Dynamo Ring", group: "gear" },
-      { id: "f10", label: "Unlock Mysterium II for Angelus", group: "optional", optional: true },
-    ],
   },
 ]

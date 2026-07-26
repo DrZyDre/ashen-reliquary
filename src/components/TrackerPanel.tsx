@@ -1,11 +1,14 @@
 import type { Build, ChecklistGroup } from "../types";
 import { ProgressBar } from "./ProgressBar";
+import { generateChecklist } from "../utils/generateChecklist";
 
 const groupLabels: Record<ChecklistGroup, string> = {
   weapons: "Weapons",
   spells: "Spells",
   stats: "Stats",
   gear: "Gear & Relics",
+  beads: "Rosary Beads",
+  prophecies: "Prophecies",
   optional: "Optional Upgrades",
 };
 
@@ -68,11 +71,11 @@ export function TrackerPanel({
 
       <div className="grid gap-5 md:grid-cols-2">
         {(Object.keys(groupLabels) as ChecklistGroup[]).map((group) => {
-          const groupItems = build.progressionChecklist.filter((item) => item.group === group);
+          const groupItems = generateChecklist(build).filter((item) => item.group === group);
           if (!groupItems.length) return null;
           return (
             <div key={group} className="rounded-lg border border-zinc-800 bg-zinc-950/60 p-4">
-              <h3 className="mb-3 font-medium text-red-200">{groupLabels[group]}</h3>
+              <h3 className="mb-3 font-medium text-red-200 border-1-2 border-red-700 pl-2">{groupLabels[group]}</h3>
               <ul className="space-y-2">
                 {groupItems.map((item) => (
                   <li key={item.id}>

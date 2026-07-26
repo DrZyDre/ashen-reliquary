@@ -5,6 +5,8 @@ export type ChecklistGroup =
   | "spells"
   | "stats"
   | "gear"
+  | "beads"
+  | "prophecies"
   | "optional";
 
 export interface ChecklistItem {
@@ -48,5 +50,6 @@ export interface Build {
   cons?: string[];
   notes: string;
   credit?: BuildCredit;
-  progressionChecklist: ChecklistItem[];
+  checklistExtras?: ChecklistItem[];
+  progressionChecklist?: ChecklistItem[];
 }
