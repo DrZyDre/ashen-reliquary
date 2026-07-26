@@ -75,7 +75,7 @@ export function TrackerPanel({
           if (!groupItems.length) return null;
           return (
             <div key={group} className="rounded-lg border border-zinc-800 bg-zinc-950/60 p-4">
-              <h3 className="mb-3 font-medium text-red-200 border-1-2 border-red-700 pl-2">{groupLabels[group]}</h3>
+              <h3 className="mb-3 font-medium text-red-200 border-l-2 border-red-700 pl-2">{groupLabels[group]}</h3>
               <ul className="space-y-2">
                 {groupItems.map((item) => (
                   <li key={item.id}>
@@ -84,8 +84,19 @@ export function TrackerPanel({
                         type="checkbox"
                         checked={Boolean(checklistState[item.id])}
                         onChange={() => onToggle(item.id)}
-                        className="accent-red-700"
+                        className="sr-only"
                       />
+                      <span className={`inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-sm border transition ${
+                        checklistState[item.id]
+                          ? "border-red-700 bg-red-700 text-zinc-100"
+                          : "border-zinc-600 bg-zinc-900"
+                      }`}>
+                        {checklistState[item.id] && (
+                          <svg viewBox="0 0 10 8" className="h-2.5 w-2.5 fill-none stroke-current stroke-2">
+                            <polyline points="1,4 3.5,6.5 9,1" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        )}
+                      </span>
                       <span className={checklistState[item.id] ? "line-through text-zinc-500" : ""}>
                         {item.label}
                       </span>
