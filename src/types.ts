@@ -28,12 +28,12 @@ export interface Build {
   difficulty: Difficulty;
   beginnerFriendly: boolean;
   stats?: {
-    flesh: number;
-    blood: number;
-    mind: number;
-    witchery: number;
-    arsenal: number;
-    faith: number;
+    flesh: number | null;
+    blood: number | null;
+    mind: number | null;
+    witchery: number | null;
+    arsenal: number | null;
+    faith: number | null;
   };
   firearms: string[];
   demonic: string[];
