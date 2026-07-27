@@ -97,6 +97,11 @@ export function BuildDetailPage({
           <span className="rounded-full border border-red-900/60 bg-black/20 px-2 py-1 text-xs text-red-100">
             {build.beginnerFriendly ? "Beginner Friendly" : "Advanced"}
           </span>
+          {build.version && (
+            <span className="rounded-full border border-zinc-700 bg-zinc-900/50 px-2 py-1 text-xs text-zinc-400">
+              {build.version}
+            </span>
+          )}
         </div>
         <p className="page-muted mb-5">{build.playstyle}</p>
 
